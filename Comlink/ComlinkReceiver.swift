@@ -60,19 +60,20 @@ Objects must conform to the NSCoding protocol since they will be persisited.
     /**
     This method adds a listener that will be called whenever an object with a specific identifier has been sent.
 
+    :param:     listener    The listener
     :param:     identifier  The identifier
-    :listener:  listener    The listener
     */
-    public func addListener(identifier: String, listener: ComlinkListener) {
-        comlink.addListener(identifier, listener: listener)
+    public func addListener(listener: ComlinkListener, identifier: String) {
+        comlink.addListener(listener, identifier: identifier)
     }
 
     /**
     This method removes a listener associated with a specific identifier.
 
-    :param: identifier  The identifier
+    :param:     listener    The listener
+    :param:     identifier  The identifier
     */
-    public func removeListener(identifier: String, listener: ComlinkListener) {
-        comlink.removeListener(identifier, listener: listener)
+    public func removeListener(listener: ComlinkListener, identifier: String) {
+        comlink.removeListener(listener, identifier: identifier)
     }
 }

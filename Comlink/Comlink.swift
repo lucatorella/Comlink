@@ -70,7 +70,7 @@ final class Comlink {
         }
     }
 
-    func addListener(identifier: String, listener: ComlinkListener) {
+    func addListener(listener: ComlinkListener, identifier: String) {
         OSSpinLockLock(&lock)
         let maybeListenersHashTable = listeners[identifier]
 
@@ -85,7 +85,7 @@ final class Comlink {
         OSSpinLockUnlock(&lock)
     }
 
-    func removeListener(identifier: String, listener: ComlinkListener) {
+    func removeListener(listener: ComlinkListener, identifier: String) {
         OSSpinLockLock(&lock)
         let maybeListenersHashTable = listeners[identifier]
         if let listenersHashTable = maybeListenersHashTable {
