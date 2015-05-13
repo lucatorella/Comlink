@@ -20,18 +20,18 @@ To use Comlink your app and its extensions must support shared app groups.
 ### Usage
 
 #### Send objects
-```
+```swift
 comlinkSender = ComlinkSender(applicationGroupIdentifier: "application.group.identifier", directoryName: "directory name")
 comlinkSender.sendObject(object, identifier: "identifier") // object must conform to the NSCoding protocol
 ```
 
 #### Receive objects
-```
+```swift
 comlinkReceiver = ComlinkReceiver(applicationGroupIdentifier: "application.group.identifier", directoryName: "directory name")
 comlinkReceiver.addListener(self, identifier: "identifier")
 ```
 ...
-```
+```swift
 func objectChanged(object: AnyObject) {
 	let obj = comlinkReceiver.retrieveObject("identifier")
 	// do something with obj
@@ -42,7 +42,7 @@ func objectChanged(object: AnyObject) {
 
 To send an image saved it in the shared folder and then send a notification containing the path
 
-```
+```swift
 let path = // use containerURLForSecurityApplicationGroupIdentifier to create the path 
 UIImageJPEGRepresentation(image, 100).writeToFile(path, atomically: true)
 comlinkSender.sendObject(path, identifier: "image available")
@@ -51,7 +51,7 @@ comlinkSender.sendObject(path, identifier: "image available")
 
 To retrieve the image
 
-```
+```swift
 func objectChanged(object: AnyObject) {
 	let path = comlinkReceiver.retrieveObject("identifier") as! String
 	let maybeData = NSData(contentsOfFile: path)
