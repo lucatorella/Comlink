@@ -1,3 +1,5 @@
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 # Comlink
 Comlink allows you to send objects between the main app and the extension (i.e. Watch Extension).
 Comlink persists via NSKeyedArchiver the object that needs to be sent and then post a Darwin Notification. 
