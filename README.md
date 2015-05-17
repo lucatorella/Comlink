@@ -2,9 +2,8 @@
 
 # Comlink
 Comlink allows you to send objects between the main app and the extension (i.e. Watch Extension).
-Comlink persists via NSKeyedArchiver the object that needs to be sent and then post a Darwin Notification. 
+Comlink persists via NSKeyedArchiver the object that needs to be sent and then posts a Darwin Notification. 
 The notification will be catched by Comlink which will unarchive the object and deliver it to its listeners. 
-Any object can register itself to be notified whenever an object is sent.
 Please note that the objects passed must conform to the NSCoding.
 
 ### Background
@@ -13,6 +12,7 @@ A comlink was a portable device that transferred voice signals from one location
 ### Requirements
 - iOS 7.0+ / Mac OS X 10.9+
 - Xcode 6.3
+- Swift 1.2
 
 ### Installation
 Embedded frameworks require a minimum deployment target of iOS 8 or OS X Mavericks.
@@ -42,7 +42,7 @@ func objectChanged(object: AnyObject) {
 
 #### Sending and receiving images
 
-To send an image saved it in the shared folder and then send a notification containing the path
+To send an image, save it in the shared folder and then send a notification containing the path.
 
 ```swift
 let path = // use containerURLForSecurityApplicationGroupIdentifier to create the path 
@@ -51,7 +51,7 @@ comlinkSender.sendObject(path, identifier: "image available")
 
 ```
 
-To retrieve the image
+To load the image:
 
 ```swift
 func objectChanged(object: AnyObject) {
