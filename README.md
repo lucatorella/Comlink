@@ -11,8 +11,10 @@ A comlink was a portable device that transferred voice signals from one location
 
 ### Requirements
 - iOS 7.0+ / Mac OS X 10.9+
-- Xcode 6.3
-- Swift 1.2
+- Xcode 7
+- Swift 2.0
+
+**If you want to use this framework with Swift 1.2 check out version 0.1.**
 
 ### Installation
 Embedded frameworks require a minimum deployment target of iOS 8 or OS X Mavericks.
