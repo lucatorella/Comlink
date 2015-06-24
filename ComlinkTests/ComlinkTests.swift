@@ -33,16 +33,25 @@ class ComlinkTests: XCTestCase {
 //        let expectation = expectationWithDescription("expectation")
 //
 //        class Listener: ComlinkListener {
+//
+//            var notificationBlock: Void -> Void
+//
+//            init(notificationReceived: Void -> Void) {
+//                notificationBlock = notificationReceived
+//            }
+//
 //            @objc func objectChanged(object: AnyObject) {
 //                if let string = object as? String where string == "test" {
-//                    expectation.fulfill()
+//                    notificationBlock()
 //                } else {
 //                    XCTAssert(false, "Didn't receive a string back or the string was wrong")
 //                }
 //            }
 //        }
 //
-//        receiver.addListener(identifier, listener: Listener())
+//        receiver.addListener(Listener(notificationReceived: { () -> Void in
+//            expectation.fulfill()
+//        }), identifier: identifier)
 //
 //        sender.sendObject("test", identifier: identifier)
 //

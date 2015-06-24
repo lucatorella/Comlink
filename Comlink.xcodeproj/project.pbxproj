@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2568DE91B3B517F0008DFAB /* Comlink.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD07AF1B01F3B6002D547B /* Comlink.swift */; };
+		A2568DEA1B3B51810008DFAB /* ComlinkReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD07E51B025CE6002D547B /* ComlinkReceiver.swift */; };
+		A2568DEB1B3B51840008DFAB /* ComlinkSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD07E31B025CDC002D547B /* ComlinkSender.swift */; };
 		A2AD07951B01EFD4002D547B /* Comlink.h in Headers */ = {isa = PBXBuildFile; fileRef = A2AD07941B01EFD4002D547B /* Comlink.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2AD079B1B01EFD4002D547B /* Comlink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2AD078F1B01EFD4002D547B /* Comlink.framework */; };
 		A2AD07A21B01EFD4002D547B /* ComlinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD07A11B01EFD4002D547B /* ComlinkTests.swift */; };
-		A2AD07AD1B01F042002D547B /* COMNotificationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A2AD07AB1B01F042002D547B /* COMNotificationHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2AD07AE1B01F042002D547B /* COMNotificationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A2AD07AC1B01F042002D547B /* COMNotificationHelper.m */; };
 		A2AD07B01B01F3B6002D547B /* Comlink.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD07AF1B01F3B6002D547B /* Comlink.swift */; };
 		A2AD07E41B025CDC002D547B /* ComlinkSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD07E31B025CDC002D547B /* ComlinkSender.swift */; };
 		A2AD07E61B025CE6002D547B /* ComlinkReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AD07E51B025CE6002D547B /* ComlinkReceiver.swift */; };
@@ -34,8 +35,6 @@
 		A2AD079A1B01EFD4002D547B /* ComlinkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComlinkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2AD07A01B01EFD4002D547B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2AD07A11B01EFD4002D547B /* ComlinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComlinkTests.swift; sourceTree = "<group>"; };
-		A2AD07AB1B01F042002D547B /* COMNotificationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COMNotificationHelper.h; sourceTree = "<group>"; };
-		A2AD07AC1B01F042002D547B /* COMNotificationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COMNotificationHelper.m; sourceTree = "<group>"; };
 		A2AD07AF1B01F3B6002D547B /* Comlink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comlink.swift; sourceTree = "<group>"; };
 		A2AD07E31B025CDC002D547B /* ComlinkSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComlinkSender.swift; sourceTree = "<group>"; };
 		A2AD07E51B025CE6002D547B /* ComlinkReceiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComlinkReceiver.swift; sourceTree = "<group>"; };
@@ -82,8 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				A2AD07941B01EFD4002D547B /* Comlink.h */,
-				A2AD07AB1B01F042002D547B /* COMNotificationHelper.h */,
-				A2AD07AC1B01F042002D547B /* COMNotificationHelper.m */,
 				A2AD07E31B025CDC002D547B /* ComlinkSender.swift */,
 				A2AD07E51B025CE6002D547B /* ComlinkReceiver.swift */,
 				A2AD07AF1B01F3B6002D547B /* Comlink.swift */,
@@ -124,7 +121,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2AD07AD1B01F042002D547B /* COMNotificationHelper.h in Headers */,
 				A2AD07951B01EFD4002D547B /* Comlink.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,7 +170,8 @@
 		A2AD07861B01EFD4002D547B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "blinkbox music";
 				TargetAttributes = {
 					A2AD078E1B01EFD4002D547B = {
@@ -225,7 +222,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2AD07AE1B01F042002D547B /* COMNotificationHelper.m in Sources */,
 				A2AD07E41B025CDC002D547B /* ComlinkSender.swift in Sources */,
 				A2AD07E61B025CE6002D547B /* ComlinkReceiver.swift in Sources */,
 				A2AD07B01B01F3B6002D547B /* Comlink.swift in Sources */,
@@ -236,7 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2568DEB1B3B51840008DFAB /* ComlinkSender.swift in Sources */,
 				A2AD07A21B01EFD4002D547B /* ComlinkTests.swift in Sources */,
+				A2568DEA1B3B51810008DFAB /* ComlinkReceiver.swift in Sources */,
+				A2568DE91B3B517F0008DFAB /* Comlink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +272,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -352,6 +352,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.torella.Comlink.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -370,6 +371,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.torella.Comlink.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -389,6 +391,7 @@
 				INFOPLIST_FILE = ComlinkTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.torella.Comlink.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -403,6 +406,7 @@
 				INFOPLIST_FILE = ComlinkTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.torella.Comlink.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

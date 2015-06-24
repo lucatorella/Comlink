@@ -18,8 +18,8 @@ Objects must conform to the NSCoding protocol since they will be persisited.
     /**
     The designated initializer.
 
-    :param: applicationGroupIdentifier  The application group identifier
-    :param: directoryName               The directory which holds the objects that will be sent
+    - parameter applicationGroupIdentifier:  The application group identifier
+    - parameter directoryName:               The directory which holds the objects that will be sent
     */
     public init(applicationGroupIdentifier: String, directoryName: String) {
         self.comlink = Comlink(applicationGroupIdentifier: applicationGroupIdentifier, directoryName: directoryName)
@@ -28,8 +28,8 @@ Objects must conform to the NSCoding protocol since they will be persisited.
     /**
     This method passes an object associated to an identifier.
 
-    :param: object      The message object to be passed
-    :param: identifier  The identifier
+    - parameter object:      The message object to be passed
+    - parameter identifier:  The identifier
     */
     public func sendObject(object: NSCoding, identifier: String) {
         comlink.sendObject(object, identifier: identifier)
@@ -38,7 +38,7 @@ Objects must conform to the NSCoding protocol since they will be persisited.
     /**
     This method removes the object associated with an identifier.
 
-    :param: identifier  The identifier
+    - parameter identifier:  The identifier
     */
     public func deleteObject(identifier: String) {
         comlink.deleteObject(identifier)

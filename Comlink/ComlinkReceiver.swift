@@ -25,8 +25,8 @@ Objects must conform to the NSCoding protocol since they will be persisited.
     /**
     The designated initializer.
 
-    :param: applicationGroupIdentifier  The application group identifier
-    :param: directoryName               The directory which holds the objects that will be sent
+    - parameter applicationGroupIdentifier:  The application group identifier
+    - parameter directoryName:               The directory which holds the objects that will be sent
     */
     public init(applicationGroupIdentifier: String, directoryName: String) {
         self.comlink = Comlink(applicationGroupIdentifier: applicationGroupIdentifier, directoryName: directoryName)
@@ -35,7 +35,7 @@ Objects must conform to the NSCoding protocol since they will be persisited.
     /**
     This method returns the object with a specific identifier.
 
-    :param: identifier  The identifier
+    - parameter identifier:  The identifier
     */
     public func retrieveObject(identifier: String) -> AnyObject? {
         return comlink.retrieveObject(identifier)
@@ -44,7 +44,7 @@ Objects must conform to the NSCoding protocol since they will be persisited.
     /**
     This method removes the object associated with an identifier.
 
-    :param: identifier  The identifier
+    - parameter identifier:  The identifier
     */
     public func deleteObject(identifier: String) {
         comlink.deleteObject(identifier)
@@ -60,8 +60,8 @@ Objects must conform to the NSCoding protocol since they will be persisited.
     /**
     This method adds a listener that will be called whenever an object with a specific identifier has been sent.
 
-    :param:     listener    The listener
-    :param:     identifier  The identifier
+    - parameter     listener:    The listener
+    - parameter     identifier:  The identifier
     */
     public func addListener(listener: ComlinkListener, identifier: String) {
         comlink.addListener(listener, identifier: identifier)
@@ -70,8 +70,8 @@ Objects must conform to the NSCoding protocol since they will be persisited.
     /**
     This method removes a listener associated with a specific identifier.
 
-    :param:     listener    The listener
-    :param:     identifier  The identifier
+    - parameter     listener:    The listener
+    - parameter     identifier:  The identifier
     */
     public func removeListener(listener: ComlinkListener, identifier: String) {
         comlink.removeListener(listener, identifier: identifier)
