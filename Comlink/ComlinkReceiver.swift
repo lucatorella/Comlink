@@ -18,7 +18,7 @@ This is the protocol that needs to be implemented to register for changes to an 
 Class used to receive objects.
 Objects must conform to the NSCoding protocol since they will be persisited.
 */
-@objc public final class ComlinkReceiver {
+public final class ComlinkReceiver {
 
     private let comlink: Comlink
 

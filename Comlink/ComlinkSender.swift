@@ -11,7 +11,7 @@ import Foundation
 Class used to send objects.
 Objects must conform to the NSCoding protocol since they will be persisited.
 */
-@objc public final class ComlinkSender {
+public final class ComlinkSender {
 
     private let comlink: Comlink
 
